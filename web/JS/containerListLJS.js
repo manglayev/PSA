@@ -60,12 +60,9 @@ $(document).ready(function () {
         method: "GET",
         datatype: "json",
         datafields: [
+            {name: 'ID',type:'string'},
             {name: 'CONTAINER_ID',type:'string'},
-            {name: 'CONTAINER_OWNER',type:'string'},
             {name: 'CONTAINER_CHECK_IN',type:'string'},
-            {name: 'CONTAINER_CHECK_OUT',type:'string'},
-            {name: 'COMMENTS',type:'string'},
-            {name: 'PAYMENT_STATUS',type:'string'},
             {name: 'PATH_TO_IMAGES',type:'string'}
         ],
         url: servletURL1,
