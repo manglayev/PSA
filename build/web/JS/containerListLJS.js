@@ -134,7 +134,7 @@ $(document).ready(function () {
             });
             },
         columns: [
-          { text: 'ID', datafield: 'CONTAINER_ID', width: 80, align: 'center' },
+          { text: 'ID', datafield: 'CONTAINER_ID', width: 100, align: 'center' },
           { text: 'Дата прибытия', datafield: 'CONTAINER_CHECK_IN', width: 200, align: 'center' },
           { text: 'Изображения', datafield: 'PATH_TO_IMAGES', width: 200, cellsalign: 'center', align: 'center', cellsformat: 'c2' }
           /*
