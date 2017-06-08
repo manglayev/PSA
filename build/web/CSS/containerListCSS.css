@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 30, 2017, 10:51:54 PM
+    Author     : TALGAT
+*/
+
+.mainDiv{
+    width: 800px;    
+}
+.mySlides{display:none}
+.demo {cursor:pointer}
+.demo w3-opacity w3-hover-opacity-off{
+    width:90%;
+    height:90%;
+}
+#customWindow{
+    max-height:1000px;
+}
+#customWindowContent{
+    height:800px;
+}
+#videoContainer1 {
+    margin: 0px auto;
+    width: 320px;
+    height: 245px;
+    border: 10px #333 solid;
+}
+#videoElement1 {
+    width: 300px;
+    height: 225px;
+    background-color: #666;
+}
+#videoContainer2 {
+    margin: 0px auto;
+    width: 320px;
+    height: 245px;
+    border: 10px #333 solid;
+}
+#videoElement2 {
+    width: 300px;
+    height: 225px;
+    background-color: #666;
+}
+#videoContainer3 {
+    margin: 0px auto;
+    width: 320px;
+    height: 245px;
+    border: 10px #333 solid;
+}
+#videoElement3 {
+    width: 300px;
+    height: 225px;
+    background-color: #666;
+}
+#videoContainer4 {
+    margin: 0px auto;
+    width: 320px;
+    height: 245px;
+    border: 10px #333 solid;
+}
+#videoElement4 {
+    width: 300px;
+    height: 225px;
+    background-color: #666;
+}
+#canvas1 {
+    width: 300px;
+    height: 225px;
+    background-color: #666;
+}
+#jqxgrid{
+    margin: 0 auto;
+}
+#buttonsExport{
+    width: 31%;
+    margin: 0 auto;
+}
