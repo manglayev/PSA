@@ -14,8 +14,10 @@ import psa.sql.SQL_Create;
  */
 public class PrepareImage {
     public void prepareImage(){
-        
-        String pathToDirectory = "/Users/TALGAT/PSA_CAMERA/";
+        //if Windows
+        String pathToDirectory = "C:\\Users\\Public\\FTP_PSA";
+        //if Mac
+        //String pathToDirectory = "/Users/TALGAT/PSA_CAMERA/";
         final File folder = new File(pathToDirectory);
         listFilesForFolder(folder);        
     }

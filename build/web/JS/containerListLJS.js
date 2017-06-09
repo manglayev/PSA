@@ -292,9 +292,12 @@ function showDivs(n) {
 }
 function accessFTP(pathToFolder){
     //var file = new File ("/d/project/test_file.psd");
-    //var ftp = new FtpConnection("ftp://192.168.1.2/PSA_IMAGES/1/1.jpg") ;
+    //var ftp = new FtpConnection("ftp://192.168.1.2/PSA_IMAGES/1/1.jpg");
     //ftp.login("TALGAT", "astana777");
-    var url = "ftp://TALGAT:ASTANA777@192.168.1.2"+pathToFolder;
+    //if MAC
+    //var url = "ftp://TALGAT:ASTANA777@192.168.1.2"+pathToFolder;
+    //if Windows
+    var url = "ftp://TALGAT:astana777@192.168.0.64"+pathToFolder;
     $('#imgBig').prop('src', url);
     $('#imgThumb').prop('src', url);
     //ftp.cd("project")
