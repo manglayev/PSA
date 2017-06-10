@@ -291,13 +291,16 @@ function showDivs(n) {
   dots[slideIndex-1].className += " w3-opacity-off";
 }
 function accessFTP(pathToFolder){
+    console.log(pathToFolder);
     //var file = new File ("/d/project/test_file.psd");
     //var ftp = new FtpConnection("ftp://192.168.1.2/PSA_IMAGES/1/1.jpg");
     //ftp.login("TALGAT", "astana777");
     //if MAC
     //var url = "ftp://TALGAT:ASTANA777@192.168.1.2"+pathToFolder;
     //if Windows
-    var url = "ftp://TALGAT:astana777@192.168.0.64"+pathToFolder;
+    //var url = "ftp://TALGAT:astana777@192.168.0.64"+pathToFolder;
+    //if Ubuntu
+    var url = "ftp://hikuser:hikpassword@192.168.1.63/hikvision/192.168.1.64_codes/"+pathToFolder+".jpg";
     $('#imgBig').prop('src', url);
     $('#imgThumb').prop('src', url);
     //ftp.cd("project")

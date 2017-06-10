@@ -15,13 +15,15 @@ import psa.sql.SQL_Create;
 public class PrepareImage {
     public void prepareImage(){
         //if Windows
-        String pathToDirectory = "C:\\Users\\Public\\FTP_PSA";
+        //String pathToDirectory = "C:\\Users\\Public\\FTP_PSA";
         //if Mac
         //String pathToDirectory = "/Users/TALGAT/PSA_CAMERA/";
+        //if Ubunutu
+        String pathToDirectory = "/home/hikuser/hikvision/192.168.1.64_codes";
         final File folder = new File(pathToDirectory);
         listFilesForFolder(folder);        
     }
-    public void listFilesForFolder(final File folder) {
+    public void listFilesForFolder(final File folder) {        
         for (final File fileEntry : folder.listFiles()) {
             if (fileEntry.isDirectory()) {
                 listFilesForFolder(fileEntry);
@@ -33,11 +35,12 @@ public class PrepareImage {
                     String [] splittedFileName = fileName.split("\\.(?=[^\\.]+$)");
                     System.out.println(splittedFileName.length);
                     String extention = splittedFileName[1];
+                    String imageName = splittedFileName[0];
                     for (String extention1 : extentions) {
                         if (extention1.equals(extention)) {
                             System.out.println("extention "+extention);
                             SQL_Create sqlCreate = new SQL_Create();
-                            sqlCreate.query();
+                            sqlCreate.query(imageName);
                         }
                     }
                 }else{

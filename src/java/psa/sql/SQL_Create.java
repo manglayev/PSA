@@ -18,21 +18,24 @@ import java.util.Date;
  */
 public class SQL_Create {
     private PreparedStatement create = null;
-    public void query(){
+    public void query(String id){
         String checkIn = "";
         //DateFormat df = new SimpleDateFormat("yyyyMMdd-HH_mm_ss");
         //Date dateobj = new Date();
         //checkIn = df.format(dateobj);
         Timestamp timeStamp = new Timestamp(new Date().getTime());
         checkIn = timeStamp.toString();   
+        //System.out.println("checkIn "+checkIn);
         SQL_Connection sqlConnection = new SQL_Connection();
         Connection connection = sqlConnection.getConnection();
+        //,  CONTAINER_CHECK_IN, PATH_TO_IMAGES
         try{           
             create = connection.prepareStatement("INSERT INTO PSA_CONTAINERS "
-                                             + "(CONTAINER_CHECK_IN) "
-                                             + "VALUES (?)");
-            
-            create.setString(1, checkIn);
+                                             + "(CONTAINER_ID, CONTAINER_CHECK_IN, PATH_TO_IMAGES) "
+                                             + "VALUES (?, ?, ?)");
+            create.setString(1, id);
+            create.setString(2, checkIn);
+            create.setString(3, id);
             int result = create.executeUpdate();
             System.out.println("inserted "+result+" line");
             create.close();
