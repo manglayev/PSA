@@ -8,21 +8,24 @@ package psa.sql;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+//import com.mysql.jdbc.Driver;
 /**
  *
  * @author TALGAT
  */
 public class SQL_Connection {
-    static final String DB_URL = "jdbc:derby://localhost:1527/PSA";
-    static final String USER = "aral";
-    static final String PASS = "hs";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/psa";
+    //static final String DB_URL = "jdbc:derby://localhost:1527/PSA";
+    static final String USER = "pma";
+    static final String PASS = "container";
     
-    public Connection getConnection(){
-        Connection connection = null;
-        try{
-            connection = DriverManager.getConnection(DB_URL,USER,PASS);            
-        }catch(SQLException sqlException){
-            System.out.println(sqlException);
+    public Connection getConnection() {
+        Connection connection = null;        
+        try{          
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection(DB_URL,USER,PASS);          
+        }catch(SQLException | ClassNotFoundException exception){
+            System.out.println(exception);
         }
          return connection;
     }
