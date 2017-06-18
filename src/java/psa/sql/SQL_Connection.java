@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author TALGAT
  */
 public class SQL_Connection {
-    static final String DB_URL = "jdbc:mysql://localhost:3306/psa";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/psa?zeroDateTimeBehavior=convertToNull";
     //static final String DB_URL = "jdbc:derby://localhost:1527/PSA";
     static final String USER = "pma";
     static final String PASS = "container";
@@ -25,7 +25,7 @@ public class SQL_Connection {
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(DB_URL,USER,PASS);          
         }catch(SQLException | ClassNotFoundException exception){
-            System.out.println(exception);
+            exception.printStackTrace();
         }
          return connection;
     }

@@ -76,8 +76,8 @@ public class ViewListServlet extends HttpServlet {
         //
         //go into camera folder and check if there is a photo from camera
         //
-        PrepareImage prepareImage = new PrepareImage();
-        prepareImage.prepareImage();
+        //PrepareImage prepareImage = new PrepareImage();
+        //prepareImage.prepareImage();
         SQL_Read sqlRead = new SQL_Read();
         ArrayList rows = sqlRead.query();
         String jsonTable = returnJSON(rows);

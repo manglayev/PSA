@@ -156,8 +156,8 @@ public class SaveImageServlet extends HttpServlet {
                 }                              
             }
         }
-    }catch(Exception ex) {
-        System.out.println(ex);
+    }catch(Exception exception) {
+         exception.printStackTrace();
     }
     //request.getRequestDispatcher("/PSA/containersList.jsp").forward(request, response);
     response.sendRedirect("/PSA/containersList.jsp");

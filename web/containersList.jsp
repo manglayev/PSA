@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
     <% String   servlet1 = response.encodeURL(request.getContextPath()+"/ViewListServlet"); %>
-    <% String   servlet2 = response.encodeURL(request.getContextPath()+"/SaveImageServlet"); %>
+    <%// String   servlet2 = response.encodeURL(request.getContextPath()+"/SaveImageServlet"); %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Containers</title>
@@ -35,7 +35,7 @@
         <link rel="stylesheet" href="/PSA/JS/jqwidgets/styles/jqx.energyblue.css" type="text/css" />
         <script>
             var servletURL1  = '<%=servlet1 %>';            
-            var servletURL2  = '<%=servlet2 %>'; 
+            //var servletURL2  = '<%//=servlet2 %>'; 
         </script>
         <script type="text/javascript" src="/PSA/JS/scripts/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="/PSA/JS/jqwidgets/jqxcore.js"></script>

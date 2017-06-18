@@ -46,7 +46,7 @@ public class SQL_Read {
             resultSet.close();
             connection.close();
         }catch(SQLException exception){
-            System.out.print(exception);            
+            exception.printStackTrace();
         }
         return rows;
     }

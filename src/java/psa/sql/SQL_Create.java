@@ -25,14 +25,15 @@ public class SQL_Create {
         //checkIn = df.format(dateobj);
         Timestamp timeStamp = new Timestamp(new Date().getTime());
         checkIn = timeStamp.toString();   
-        //System.out.println("checkIn "+checkIn);
         SQL_Connection sqlConnection = new SQL_Connection();
         Connection connection = sqlConnection.getConnection();
+        System.out.println("ID "+id);
+        System.out.println("checkIn "+checkIn);
         //,  CONTAINER_CHECK_IN, PATH_TO_IMAGES
         try{           
             create = connection.prepareStatement("INSERT INTO PSA_CONTAINERS "
                                              + "(CONTAINER_ID, CONTAINER_CHECK_IN, PATH_TO_IMAGES) "
-                                             + "VALUES (?, ?, ?)");
+                                             + " VALUES (?, ?, ?)");
             create.setString(1, id);
             create.setString(2, checkIn);
             create.setString(3, id);

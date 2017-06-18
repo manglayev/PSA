@@ -131,9 +131,9 @@ $(document).ready(function () {
             });
             },
         columns: [
-          { text: 'ID', datafield: 'CONTAINER_ID', width: 100, align: 'center' },
-          { text: 'Дата прибытия', datafield: 'CONTAINER_CHECK_IN', width: 200, align: 'center' },
-          { text: 'Изображения', datafield: 'PATH_TO_IMAGES', width: 200, cellsalign: 'center', align: 'center', cellsformat: 'c2' }
+          { text: 'ID', datafield: 'CONTAINER_ID', width: 150, align: 'center' },
+          { text: 'Дата прибытия', datafield: 'CONTAINER_CHECK_IN', width: 180, align: 'center' },
+          { text: 'Изображения', datafield: 'PATH_TO_IMAGES', width: 170, cellsalign: 'center', align: 'center', cellsformat: 'c2' }
           /*
           { text: 'ID', datafield: 'CONTAINER_ID', width: 50, align: 'center' },
           { text: 'Владелец', datafield: 'CONTAINER_OWNER', width: 100, align: 'center' },
@@ -298,9 +298,9 @@ function accessFTP(pathToFolder){
     //if MAC
     //var url = "ftp://TALGAT:ASTANA777@192.168.1.2"+pathToFolder;
     //if Windows
-    //var url = "ftp://TALGAT:astana777@192.168.0.64"+pathToFolder;
+    var url = "ftp://TALGAT:astana777@192.168.1.10/"+pathToFolder+".jpg";
     //if Ubuntu
-    var url = "ftp://hikuser:hikpassword@192.168.1.63/hikvision/192.168.1.64_codes/"+pathToFolder+".jpg";
+    //var url = "ftp://hikuser:hikpassword@192.168.1.63/hikvision/192.168.1.64_codes/"+pathToFolder+".jpg";
     $('#imgBig').prop('src', url);
     $('#imgThumb').prop('src', url);
     //ftp.cd("project")
